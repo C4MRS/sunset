@@ -1,0 +1,146 @@
+.navbar {
+  transition: top 0.3s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar.show {
+  top: 0;
+}
+
+.navbar:not(.show) {
+  top: -100px; /* O qualsiasi valore che nasconda la navbar */
+}
+
+footer {
+  box-shadow: 0 -20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+#social-tab::after,
+#aboutmeline::after,
+#hobbiesline::after,
+#projectsline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  margin: 80px 17px;
+  background: oklch(var(--s));
+  z-index: -1;
+}
+#social-tab,
+#aboutmeline,
+#hobbiesline,
+#projectsline {
+  z-index: 1;
+}
+.menu,
+.menu-vertical {
+  list-style-type: circle !important;
+}
+li::marker {
+  color: oklch(var(--p)) !important;
+}
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.download-button .docs {
+  display: inline-flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 13px 10px;
+  z-index: 1;
+  background-color: oklch(var(--p));
+  border: solid 1px #e8e8e82d;
+  border-radius: 10px;
+  color: black;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 0.875rem;
+  line-height: 1em;
+  font-weight: 600;
+  text-decoration-line: none;
+}
+
+.download-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: #01e056;
+  border: solid 1px #01e0572d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* Animazione per muovere il gradiente lungo il perimetro */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-gradient-move {
+  box-shadow: 10px 10px 15px -1px rgba(255, 255, 255, 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.animate-gradient-move:hover {
+  animation: gradient-move 3s linear infinite;
+  background-size: 300% 300%;
+  background-position: 0% 0%;
+  box-shadow: none;
+}
+
+article {
+  cursor: pointer;
+}

@@ -1,0 +1,534 @@
+<html class="scroll-smooth">
+  <body data-theme="sunset" class="font-mono h-auto bg-base-300">
+    <div
+      id="navbar"
+      class="navbar bg-base-300 shadow-xl show text-gray-300 z-50"
+    >
+      <div class="navbar-start w-0 lg:mr-auto">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a (click)="scrollToElement('aboutme')">About me</a></li>
+            <li><a (click)="scrollToElement('hobbies')">My Hobbies</a></li>
+            <li><a (click)="scrollToElement('myprojects')">My Projects</a></li>
+          </ul>
+        </div>
+        <a (click)="scrollToElement('home')" class="btn btn-ghost text-xl"
+          >CAMRS</a
+        >
+      </div>
+      <div class="navbar-center hidden lg:flex lg:mr-auto">
+        <ul class="menu menu-horizontal px-1">
+          <li><a (click)="scrollToElement('aboutme')">About me</a></li>
+          <li><a (click)="scrollToElement('hobbies')">My Hobbies</a></li>
+          <li><a (click)="scrollToElement('myprojects')">My Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      id="home"
+      class="flex flex-1 flex-row justify-center items-center h-screen w-auto"
+    >
+      <div
+        class="flex flex-col space-y-20 mr-10 text-xl after:h-1/6"
+        id="social-tab"
+      >
+        <ul class="space-y-2 ml-2 text-secondary">
+          <li>
+            <a target="_blank" href="#">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 496 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="[writing-mode:vertical-lr] rotate-180 border-2 border-secondary p-1 py-3 text-white bg-base-300"
+        >
+          FOLLOW ME
+        </p>
+      </div>
+      <div>
+        <div class="text-gray-300">
+          <div class="w-auto">
+            <h1 class="text-xl font-bold text-primary">Hello there! I am</h1>
+            <p class="mb-1 text-5xl font-bold text-white">Name Surname</p>
+            <p class="mb-5 text-lg text-primary">Developer</p>
+            <ul class="ml-4 mb-5 menu-vertical lg:menu-horizontal lg:space-x-6">
+              <li>Web Developer</li>
+              <li>Programmer</li>
+              <li>Software Engineer</li>
+            </ul>
+            <div class="flex space-x-2">
+              <button class="download-button">
+                <div class="docs">
+                  <svg
+                    class="css-i6dzq1"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    fill="none"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    height="20"
+                    width="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line y2="13" x2="8" y1="13" x1="16"></line>
+                    <line y2="17" x2="8" y1="17" x1="16"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  Get Resume
+                </div>
+                <div class="download">
+                  <svg
+                    class="css-i6dzq1"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    fill="none"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line y2="3" x2="12" y1="15" x1="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <button
+                (click)="scrollToElement('aboutme')"
+                class="btn btn-secondary btn-outline"
+              >
+                About Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="aboutme"
+      class="flex flex-1 flex-col justify-center items-center h-screen w-auto pt-5"
+    >
+      <span class="md:hidden flex items-center w-full">
+        <span class="h-px flex-1 bg-secondary"></span>
+        <span class="shrink-0 px-6 text-white font-bold">ABOUT ME</span>
+        <span class="h-px flex-1 bg-secondary"></span>
+      </span>
+      <section
+        class="flex flex-col md:flex-row overflow-hidden bg-base-300 w-auto h-1/2"
+      >
+        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+          <div class="mx-auto max-w-xl text-center">
+            <p class="md:mt-4 md:block text-gray-300 text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <div class="mt-4 md:mt-8">
+              <button
+                (click)="scrollToElement('hobbies')"
+                class="btn btn-primary w-48"
+              >
+                My Hobbies
+              </button>
+              <button
+                (click)="scrollToElement('myprojects')"
+                class="btn btn-outline btn-secondary w-48 lg:ml-5 mt-3"
+              >
+                My Projects
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center items-center h-fit w-auto -mt-16 sm:mt-0"
+        >
+          <!-- To create your own opeep https://beta.opeeps.fun/collections/open-peeps?options=body%3DU3dlYXRlckRvdHM%3D%26face%3DU21pbGU%3D%26head%3DSGF0SGlw&settings= -->
+          <img
+            alt=""
+            src="https://placeholder.pics/svg/350x350/DEDEDE/555555/your%20image"
+            class="object-cover"
+            width="350"
+            height="150"
+          />
+        </div>
+        <div
+          class="md:flex flex-col space-y-20 mr-10 text-xl after:h-1/6 hidden"
+          id="aboutmeline"
+        >
+          <p
+            class="[writing-mode:vertical-lr] outline-secondary p-1 py-3 text-white bg-base-300 border-2 border-secondary"
+          >
+            ABOUT ME
+          </p>
+        </div>
+      </section>
+      <div class="w-full h-36">
+        <span class="relative flex justify-center mt-10 w-full">
+          <div
+            class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-75"
+          ></div>
+          <span class="relative z-10 bg-base-300 px-6 text-white"
+            >MY SKILLS</span
+          >
+        </span>
+      </div>
+      <div
+        class="flex flex-row flex-wrap justify-center items-center h-auto w-auto gap-2 -mt-10"
+      >
+        <!-- ICONS FOR SKILLS https://github.com/devicons/devicon/tree/v2.16.0/icons/ -->
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain.svg"
+          (click)="goToPage('https://developer.android.com/?hl=it')"
+          height="60"
+          width="60"
+          class="cursor-pointer"
+          alt="android logo"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-plain.svg"
+          (click)="goToPage('https://angular.io')"
+          height="60"
+          width="60"
+          class="cursor-pointer"
+          alt="angularjs logo"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+          (click)="goToPage('https://getbootstrap.com')"
+          height="60"
+          width="60"
+          class="cursor-pointer"
+          alt="bootstrap logo"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+          (click)="goToPage('https://tailwindcss.com')"
+          height="60"
+          width="60"
+          class="cursor-pointer"
+          alt="tailwind logo"
+        />
+      </div>
+    </div>
+    <div
+      id="hobbies"
+      class="flex flex-col md:flex-row justify-center items-center h-auto md:h-screen w-auto pt-5 md:space-x-5"
+    >
+      <span class="md:hidden flex items-center w-full">
+        <span class="h-px flex-1 bg-secondary"></span>
+        <span class="shrink-0 px-6 text-white font-bold">MY HOBBIES</span>
+        <span class="h-px flex-1 bg-secondary"></span>
+      </span>
+      <div
+        class="hidden md:flex flex-col space-y-20 md:ml-0 lg:ml-10 text-xl after:h-1/6 mt-0 lg:-mt-16"
+        id="hobbiesline"
+      >
+        <p
+          class="[writing-mode:vertical-lr] rotate-180 outline-secondary p-1 py-3 text-white bg-base-300 border-2 border-secondary"
+        >
+          MY HOBBIES
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-5 gap-y-5 mt-5 md:mt-0">
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/travel-svgrepo-com.svg"
+              alt="Travelling"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Travelling</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/reading-mode-svgrepo-com.svg"
+              alt="Reading"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Reading</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/programming-svgrepo-com.svg"
+              alt="Coding"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Coding</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/photo-pro-svgrepo-com.svg"
+              alt="Photography"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Photography</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/music-svgrepo-com.svg"
+              alt="Music"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Music</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/gym-svgrepo-com.svg"
+              alt="Gym"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Working out</h2>
+          </div>
+        </div>
+        <div
+          class="card h-64 w-full sm:w-80 md:w-52 lg:w-48 bg-base-200 shadow-xl mt-5"
+        >
+          <figure>
+            <img
+              src="../../assets/game-booster-svgrepo-com.svg"
+              alt="Gaming"
+              class="h-36 w-36 md:h-36 md:w-56 lg:h-36 lg:w-36"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title self-center">Gaming</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="myprojects"
+      class="flex flex-wrap justify-center content-center gap-10 mb-10 h-screen"
+    >
+      <span class="lg:hidden flex items-center w-full">
+        <span class="h-px flex-1 bg-secondary"></span>
+        <span class="shrink-0 px-6 text-white font-bold">MY PROJECTS</span>
+        <span class="h-px flex-1 bg-secondary"></span>
+      </span>
+      <article
+        (click)="goToPage('https://github.com/C4MRS')"
+        class="h-auto w-80 animate-gradient-move rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_2s]"
+      >
+        <div class="h-full rounded-[10px] bg-base-200 p-4 !pt-20 sm:p-6">
+          <span class="block text-xs text-white"> Title </span>
+
+          <h3 class="mt-0.5 text-lg font-medium text-white">Description</h3>
+        </div>
+      </article>
+      <article
+        (click)="goToPage('https://github.com/C4MRS')"
+        class="h-auto w-80 animate-gradient-move rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_2s]"
+      >
+        <div class="h-full rounded-[10px] bg-base-200 p-4 !pt-20 sm:p-6">
+          <span class="block text-xs text-white">Title</span>
+
+          <h3 class="mt-0.5 text-lg font-medium text-white">Description</h3>
+        </div>
+      </article>
+      <article
+        (click)="goToPage('https://github.com/C4MRS')"
+        class="h-auto w-80 animate-gradient-move rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_2s]"
+      >
+        <div class="h-full rounded-[10px] bg-base-200 p-4 !pt-20 sm:p-6">
+          <span class="block text-xs text-white"> Title </span>
+
+          <h3 class="mt-0.5 text-lg font-medium text-white">Description</h3>
+        </div>
+      </article>
+      <div
+        class="lg:flex flex-col space-y-20 mr-10 text-xl after:h-1/6 hidden"
+        id="projectsline"
+      >
+        <p
+          class="[writing-mode:vertical-lr] outline-secondary p-1 py-3 text-white bg-base-300 border-2 border-secondary"
+        >
+          MY PROJECTS
+        </p>
+      </div>
+    </div>
+    <footer class="bg-base-300 shadow-inner">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div
+            class="flex flex-col justify-center sm:justify-start items-center cursor-pointer mb-3 sm:mb-0"
+            (click)="scrollToElement('home')"
+          >
+            <span>THANKS / GRAZIE</span>
+            <div class="h-1 w-full border-t animate-pulse border-primary"></div>
+          </div>
+          <div class="flex justify-center gap-x-10 mb-3 sm:mb-0">
+            <section class="flex justify-center items-center">
+              <a
+                class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+                href="https://github.com/C4MRS"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 15 15"
+                  class="w-5"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    fill="currentColor"
+                    d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+                  ></path>
+                </svg>
+                <span
+                  class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                >
+                  GitHub
+                </span>
+              </a>
+            </section>
+
+            <section class="flex justify-center items-center">
+              <a
+                href="#"
+                target="_blank"
+                class="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] from-gray-800 text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1.1em"
+                  viewBox="0 0 512 512"
+                  stroke-width="0"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
+                  ></path>
+                </svg>
+                <span
+                  class="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                >
+                  Linkedin
+                </span>
+              </a>
+            </section>
+          </div>
+          <p
+            class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right"
+          >
+            Copyright &copy; 2024. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
