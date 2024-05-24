@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/C4MRS/sunset/develop/src/assets/favicon.ico?token=GHSAT0AAAAAACSWWDMWDZEP3NRNMH2XEPIIZSPYGTA" width="64">
+  <img src="https://raw.githubusercontent.com/C4MRS/sunset/main/src/assets/favicon.ico?token=GHSAT0AAAAAACSWWDMWDZEP3NRNMH2XEPIIZSPYGTA" width="64">
   <h3 align="center"><code>sunset</code></h3>
 </p>
 
